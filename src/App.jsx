@@ -12,7 +12,7 @@ import './App.css'
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth') || false)
-  console.log(Home)
+  // console.log(isAuth)
 
   return (
     <Router>

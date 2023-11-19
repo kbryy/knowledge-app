@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
-import './Knowledge.css'
 import uuid from 'react-uuid'
 import {
   addDoc,
@@ -12,6 +9,9 @@ import {
   updateDoc,
 } from 'firebase/firestore'
 import { db } from '~/firebase'
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
+import { H2, P, AnchorLink } from './MarkdownComponents'
+import './Knowledge.css'
 
 // ノートの初期値を定数として宣言
 const initialNote = {
@@ -89,24 +89,6 @@ const Knowledge = () => {
     setNotes([newNote, ...notes])
     await addDoc(collection(db, 'notes'), newNote)
     setCount((prevCount) => prevCount + 1)
-  }
-
-  const H2 = ({ node, ...props }) => {
-    return (
-      <h2 className="markdown-h2" id={node.position?.start.line.toString()}>
-        {props.children}
-      </h2>
-    )
-  }
-
-  const P = ({ ...props }) => {
-    return <p className="markdown-p">{props.children}</p>
-  }
-
-  const AnchorLink = ({ node, ...props }) => {
-    return (
-      <a href={'#' + node.position?.start.line.toString()}>{props.children}</a>
-    )
   }
 
   const editHtml = () => {
@@ -225,21 +207,6 @@ const Knowledge = () => {
       <div className="content">{isEditing ? editHtml() : previewHtml()}</div>
     </div>
   )
-}
-
-Knowledge.H2.propTypes = {
-  node: PropTypes.object, // または PropTypes.any
-  children: PropTypes.node,
-}
-
-Knowledge.P.propTypes = {
-  node: PropTypes.object, // または PropTypes.any
-  children: PropTypes.node,
-}
-
-Knowledge.AnchorLink.propTypes = {
-  node: PropTypes.object, // または PropTypes.any
-  children: PropTypes.node,
 }
 
 export default Knowledge

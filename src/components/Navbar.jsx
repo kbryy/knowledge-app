@@ -35,7 +35,7 @@ const Navbar = ({ isAuth }) => {
 }
 
 Navbar.propTypes = {
-  isAuth: PropTypes.bool.isRequired,
+  isAuth: PropTypes.string.isRequired,
 }
 
 export default Navbar
