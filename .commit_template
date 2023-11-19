@@ -1,0 +1,18 @@
+# ==== Commit Messages ====
+
+# ==================== Emojis ====================
+# 🎉  :tada: Initial Commit
+# 🔖  :bookmark: Version Tag
+# ✨  :sparkles: New Feature
+# 🐛  :bug: Bagfix
+# ♻️  :recycle: Refactoring
+# 📚  :books: Documentation
+# 🎨  :art: Accessibility
+# 🐎  :horse: Performance
+# 🔧  :wrench: Tooling
+# 🚨  :rotating_light: Tests
+# 💩  :hankey: Deprecation
+# 🗑️  :wastebasket: Removal
+# 🚧  :construction: Work In Progress
+
+# git config --local commit.template .commit_template
