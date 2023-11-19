@@ -1,35 +1,35 @@
-import React from "react";
-import "./Home.css";
-import cat from "./images/cat.png";
+import React from 'react'
+import './Home.css'
+import cat from '~/assets/images/cat.png'
 
 const Home = ({ isAuth }) => {
   const contentsList = [
     {
-      title: "content",
+      title: 'content',
       list: [
-        { name: "ALL", color: "rgb(133, 163, 217)" },
-        { name: "HTML", color: "rgb(40, 163, 217)" },
-        { name: "Python", color: "rgb(48, 111, 160)" },
-        { name: "Java", color: "rgb(235, 138, 35)" },
-        { name: "Nvim", color: "rgb(90, 167, 61)" },
-        { name: "Linux", color: "rgb(15, 15, 15)" },
-        { name: "Tmux", color: "rgb(38, 54, 71)" },
-        { name: "Books", color: "rgb(40, 163, 0)" },
+        { name: 'ALL', color: 'rgb(133, 163, 217)' },
+        { name: 'HTML', color: 'rgb(40, 163, 217)' },
+        { name: 'Python', color: 'rgb(48, 111, 160)' },
+        { name: 'Java', color: 'rgb(235, 138, 35)' },
+        { name: 'Nvim', color: 'rgb(90, 167, 61)' },
+        { name: 'Linux', color: 'rgb(15, 15, 15)' },
+        { name: 'Tmux', color: 'rgb(38, 54, 71)' },
+        { name: 'Books', color: 'rgb(40, 163, 0)' },
       ],
     },
     {
-      title: "portfolio",
-      list: [{ name: "Book", color: "rgb(40, 163, 0)" }],
+      title: 'portfolio',
+      list: [{ name: 'Book', color: 'rgb(40, 163, 0)' }],
     },
-  ];
+  ]
 
   const blogs = [
-    { title: "変数", text: "aaaaaaaaaaaaaaaa", tag: "python", key: "1" },
-    { title: "変数", text: "aaaaaaaaaaaaaaaa", tag: "python", key: "2" },
-    { title: "変数", text: "aaaaaaaaaaaaaaaa", tag: "python", key: "3" },
-    { title: "変数", text: "aaaaaaaaaaaaaaaa", tag: "python", key: "4" },
-    { title: "変数", text: "aaaaaaaaaaaaaaaa", tag: "python", key: "5" },
-  ];
+    { title: '変数', text: 'aaaaaaaaaaaaaaaa', tag: 'python', key: '1' },
+    { title: '変数', text: 'aaaaaaaaaaaaaaaa', tag: 'python', key: '2' },
+    { title: '変数', text: 'aaaaaaaaaaaaaaaa', tag: 'python', key: '3' },
+    { title: '変数', text: 'aaaaaaaaaaaaaaaa', tag: 'python', key: '4' },
+    { title: '変数', text: 'aaaaaaaaaaaaaaaa', tag: 'python', key: '5' },
+  ]
 
   return (
     <div className="main">
@@ -74,7 +74,7 @@ const Home = ({ isAuth }) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

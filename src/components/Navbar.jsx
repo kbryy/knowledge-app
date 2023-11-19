@@ -1,12 +1,12 @@
-import "./Navbar.css";
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import './Navbar.css'
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faHouse,
   faFilePen,
   faArrowRightToBracket,
-} from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+} from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 const Navbar = ({ isAuth }) => {
   return (
@@ -31,7 +31,7 @@ const Navbar = ({ isAuth }) => {
         </>
       )}
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
