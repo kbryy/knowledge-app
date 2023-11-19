@@ -2,7 +2,7 @@ import React from 'react'
 import './Home.css'
 import cat from '~/assets/images/cat.png'
 
-const Home = ({ isAuth }) => {
+const Home = () => {
   const contentsList = [
     {
       title: 'content',
@@ -21,14 +21,6 @@ const Home = ({ isAuth }) => {
       title: 'portfolio',
       list: [{ name: 'Book', color: 'rgb(40, 163, 0)' }],
     },
-  ]
-
-  const blogs = [
-    { title: '変数', text: 'aaaaaaaaaaaaaaaa', tag: 'python', key: '1' },
-    { title: '変数', text: 'aaaaaaaaaaaaaaaa', tag: 'python', key: '2' },
-    { title: '変数', text: 'aaaaaaaaaaaaaaaa', tag: 'python', key: '3' },
-    { title: '変数', text: 'aaaaaaaaaaaaaaaa', tag: 'python', key: '4' },
-    { title: '変数', text: 'aaaaaaaaaaaaaaaa', tag: 'python', key: '5' },
   ]
 
   return (

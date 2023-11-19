@@ -1,9 +1,9 @@
-import './Navbar.css'
 import React from 'react'
+import PropTypes from 'prop-types'
+import './Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faHouse,
-  faFilePen,
   faArrowRightToBracket,
 } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
@@ -32,6 +32,10 @@ const Navbar = ({ isAuth }) => {
       )}
     </nav>
   )
+}
+
+Navbar.propTypes = {
+  isAuth: PropTypes.bool.isRequired,
 }
 
 export default Navbar

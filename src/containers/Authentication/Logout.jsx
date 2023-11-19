@@ -1,5 +1,6 @@
 import React from 'react'
-import { auth } from '../firebase'
+import PropTypes from 'prop-types'
+import { auth } from '~/firebase'
 import { useNavigate } from 'react-router-dom'
 import { signOut } from 'firebase/auth'
 
@@ -20,6 +21,10 @@ const Logout = ({ setIsAuth }) => {
       <button onClick={logout}>ログアウト</button>
     </div>
   )
+}
+
+Logout.propTypes = {
+  setIsAuth: PropTypes.func.isRequired,
 }
 
 export default Logout

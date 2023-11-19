@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 import './Knowledge.css'
 import uuid from 'react-uuid'
@@ -10,7 +11,7 @@ import {
   getDocs,
   updateDoc,
 } from 'firebase/firestore'
-import { db, auth } from '~/firebase'
+import { db } from '~/firebase'
 
 // ノートの初期値を定数として宣言
 const initialNote = {
@@ -98,7 +99,7 @@ const Knowledge = () => {
     )
   }
 
-  const P = ({ node, ...props }) => {
+  const P = ({ ...props }) => {
     return <p className="markdown-p">{props.children}</p>
   }
 
@@ -224,6 +225,21 @@ const Knowledge = () => {
       <div className="content">{isEditing ? editHtml() : previewHtml()}</div>
     </div>
   )
+}
+
+Knowledge.H2.propTypes = {
+  node: PropTypes.object, // または PropTypes.any
+  children: PropTypes.node,
+}
+
+Knowledge.P.propTypes = {
+  node: PropTypes.object, // または PropTypes.any
+  children: PropTypes.node,
+}
+
+Knowledge.AnchorLink.propTypes = {
+  node: PropTypes.object, // または PropTypes.any
+  children: PropTypes.node,
 }
 
 export default Knowledge
