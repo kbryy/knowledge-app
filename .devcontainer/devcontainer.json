@@ -1,0 +1,19 @@
+{
+    "name": "KnowledgeApp",
+    "image": "node:latest",
+    "forwardPorts": [3000],
+    "appPort": [3000],
+    "workspaceFolder": "/workspace",
+    "mounts": [
+        "source=./,target=/workspace,type=bind,consistency=cached"
+    ],
+    "postCreateCommand": "/bin/bash -c 'npm start'",
+    "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+    "customizations": {
+		"vscode": {	
+			"extensions": [
+                "rvest.vs-code-prettier-eslint"
+			]
+		}
+	}
+}
