@@ -7,6 +7,9 @@
     "mounts": [
         "source=./,target=/workspace,type=bind,consistency=cached"
     ],
+    "runArgs": [
+        "-v", "${env:HOME}/.ssh:/root/.ssh:cached" // Todo: ssh-agent 推奨
+    ],
     "postCreateCommand": "/bin/bash -c 'npm start'",
     "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
     "customizations": {
