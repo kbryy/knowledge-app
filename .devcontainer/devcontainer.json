@@ -3,8 +3,8 @@
   "image": "node:latest",
   "workspaceFolder": "/workspace",
   "mounts": ["source=./,target=/workspace,type=bind,consistency=cached"],
-  "postCreateCommand": "/bin/bash -c 'npm ci && npm start'",
-  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+  "postCreateCommand": "/bin/bash -c 'npm ci'",
+  "postStartCommand": "/bin/bash -c 'git config --global --add safe.directory ${containerWorkspaceFolder} && npm start'",
   "customizations": {
     "vscode": {
       "extensions": ["rvest.vs-code-prettier-eslint"]
