@@ -1,22 +1,13 @@
 {
-    "name": "KnowledgeApp",
-    "image": "node:latest",
-    "forwardPorts": [3000],
-    "appPort": [3000],
-    "workspaceFolder": "/workspace",
-    "mounts": [
-        "source=./,target=/workspace,type=bind,consistency=cached"
-    ],
-    "runArgs": [
-        "-v", "${env:HOME}/.ssh:/root/.ssh:cached" // Todo: ssh-agent 推奨
-    ],
-    "postCreateCommand": "/bin/bash -c 'npm start'",
-    "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
-    "customizations": {
-		"vscode": {	
-			"extensions": [
-                "rvest.vs-code-prettier-eslint"
-			]
-		}
-	}
+  "name": "KnowledgeApp",
+  "image": "node:latest",
+  "workspaceFolder": "/workspace",
+  "mounts": ["source=./,target=/workspace,type=bind,consistency=cached"],
+  "postCreateCommand": "/bin/bash -c 'npm ci && npm start'",
+  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+  "customizations": {
+    "vscode": {
+      "extensions": ["rvest.vs-code-prettier-eslint"]
+    }
+  }
 }
