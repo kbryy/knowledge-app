@@ -4,10 +4,11 @@
   "workspaceFolder": "/workspace",
   "mounts": ["source=./,target=/workspace,type=bind,consistency=cached"],
   "postCreateCommand": "/bin/bash -c 'apt update && apt install -y vim && npm ci'",
-  "postStartCommand": "/bin/bash -c 'git config --global --add safe.directory ${containerWorkspaceFolder} && npm start'",
+  "postStartCommand": "/bin/bash -c 'git config --global --add safe.directory ${containerWorkspaceFolder}'",
+  // "postAttachCommand":"/bin/bash -c 'npm start'",
   "customizations": {
     "vscode": {
-      "extensions": ["rvest.vs-code-prettier-eslint"]
+      "extensions": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
     }
   }
 }
