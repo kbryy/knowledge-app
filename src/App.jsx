@@ -11,8 +11,10 @@ import Footer from '~/components/Footer'
 import './App.css'
 
 function App() {
-  const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth') === 'true')
-  console.log(isAuth)
+  const [isAuth, setIsAuth] = useState(
+    localStorage.getItem('isAuth') === 'true',
+  )
+  // console.log(isAuth)
 
   return (
     <Router>
