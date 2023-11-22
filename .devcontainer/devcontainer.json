@@ -5,7 +5,7 @@
   "mounts": ["source=./,target=/workspace,type=bind,consistency=cached"],
   "postCreateCommand": "/bin/bash -c 'apt update && apt install -y vim && npm ci'",
   "postStartCommand": "/bin/bash -c 'git config --global --add safe.directory ${containerWorkspaceFolder}'",
-  // "postAttachCommand":"/bin/bash -c 'npm start'",
+  "postAttachCommand": "/bin/bash -c 'npm run start'",
   "customizations": {
     "vscode": {
       "extensions": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
